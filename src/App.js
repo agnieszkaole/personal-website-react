@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import Header from "./components/layout/header/Header";
 import Footer from "./components/layout/footer/Footer";
 import Home from "./pages/home/Home";
@@ -12,6 +12,7 @@ function App() {
       <Header />
       <main>
         <Home />
+
         <About />
         <Projects />
         <Contact />

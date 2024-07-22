@@ -1,17 +1,17 @@
 import React from "react";
-import photo from "../../assets/img/AgnieszkaOleLegitymacjaLP.jpg";
-import pdf from "../../assets/pdf/Agnieszka_Ole_CV.pdf";
+import pdf from "../../assets/pdf/Agnieszka_Ole_CV_dart.pdf";
 import Button from "../../components/ui/button/Button";
 import styled from "styled-components";
 import "../../styles/style.css";
+import "../../styles/variables.css";
 
 const AboutPage = styled.div`
   position: relative;
   padding: 50px 20px;
-  color: #37306b;
+  color: #ffffff;
 
   .title {
-    color: #37306b;
+    color: var(--secondary-color);
     text-align: center;
   }
 
@@ -20,47 +20,27 @@ const AboutPage = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* max-width: 1100px; */
+    max-width: 750px;
     margin: 50px auto;
     text-align: center;
 
-    .image-decor {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: -30px;
-        left: 0;
-        width: 160px;
-        height: 215px;
-        border-radius: 10px;
-        background: linear-gradient(
-          90deg,
-          rgba(87, 79, 151, 0.7) 0%,
-          rgba(158, 71, 132, 0.7) 50%
-        );
-        z-index: -1;
-      }
-
-      img {
-        border-radius: 10px;
-        width: 160px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        margin: 0 35px;
-      }
+    img {
+      border-radius: 10px;
+      width: 160px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      margin: 0 35px;
     }
 
     p {
       font-size: 18px;
-      line-height: 1.4;
+      line-height: 1.5;
       margin: 12px auto;
-      max-width: 500px;
+      /* max-width: 500px; */
     }
 
     p:first-of-type {
       font-weight: 700;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     @media (min-width: 1024px) {
@@ -87,33 +67,28 @@ const About = () => {
       <AboutPage>
         <h2 className="title">O mnie</h2>
         <div className="about-container">
-          <div className="about-image">
-            <div className="image-decor">
-              <img src={photo} alt="" />
-            </div>
-          </div>
+          {/* <div className="about-image">
+            <img src={photo} alt="" />
+          </div> */}
           <div className="about-text">
-            <p>Cześć, mam na imię Agnieszka. </p>
+            <p>Hello! I'm Agnieszka Ole.</p>
             <p>
-              Tworzę responsywne strony internetowe z&nbsp;wykorzystaniem
-              <span className="underline">
-                {" "}
-                HTML5, CSS3, JavaScript, jQuery
-              </span>
-              .
+              I create responsive websites using
+              <span className="underline">HTML5, CSS3, JavaScript, React</span>.
             </p>
             <p>
-              Obecnie jestem w&nbsp;trakcie nauki
-              <span className="underline"> React.js</span>. W&nbsp;przyszłości
-              chciałabym nauczyć m.in. Node.js.
+              I have started my adventure in web development driven by a
+              curiosity about how websites work and a passion for bringing
+              creative ideas to life through code.
             </p>
             <p>
-              Moją mocną stroną jest
+              My goal is to
+              <span className="underline">create web experiences</span> that are
+              not only <span className="underline">visually beautiful</span> but
+              also
               <span className="underline">
-                {" "}
-                umiejętność analitycznego myślenia i&nbsp;komunikatywność
+                intuitive and enjoyable for users.
               </span>
-              .
             </p>
           </div>
         </div>

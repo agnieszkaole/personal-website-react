@@ -20,6 +20,7 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;
   color: #fff;
+  background-color: var(--primary-color);
 }
 
 .wrapper {

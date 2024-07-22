@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import styled from "styled-components";
-
+import "../../../styles/variables.css";
 const Navbar = styled.nav`
   display: none;
 
@@ -68,47 +68,6 @@ const Navbar = styled.nav`
       &.active {
         font-weight: 700;
       }
-
-      /* &:hover a {
-        font-weight: 700;
-      } */
-
-      /* &::before {
-        height: 2px;
-        content: "";
-        position: absolute;
-        background-color: #fff;
-        left: 10px;
-        bottom: 10px;
-        width: 0%;
-        transition: 0.3s;
-        cursor: pointer;
-        &:hover {
-          position: absolute;
-          width: 60%;
-          left: 50%;
-          bottom: 10px;
-          display: block;
-          transform: translateX(-50%);
-        }
-      } */
-
-      /* &.active::before {
-        position: absolute;
-        width: 60%;
-        left: 50%;
-        bottom: 10px;
-        display: block;
-        transform: translateX(-50%);
-      } */
-
-      /* a {
-        display: block;
-        text-decoration: none;
-        color: #fff;
-        font-size: 18px;
-        transition: 0.3s;
-      } */
     }
   }
 
@@ -119,7 +78,7 @@ const Navbar = styled.nav`
     top: 0;
     right: 0;
     z-index: 998;
-    background: rgba(55, 48, 107, 0.9);
+    background: var(--primary-color);
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
     ul {

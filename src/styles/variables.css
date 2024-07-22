@@ -1,12 +1,9 @@
 :root {
   /* ------- colors ------- */
-  --primary-color: #9e4784;
-  --secondary-color: #65656d;
+  --primary-color: #000216;
+  --secondary-color: #4441b6;
   --tertiary-color: #acacb4;
   --quaternary-color: #e4e4e7;
-  /* ---------------------- */
-}
 
-body {
-  color: var(--theme-primary);
+  /* ---------------------- */
 }

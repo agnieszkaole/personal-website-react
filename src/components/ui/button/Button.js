@@ -20,9 +20,9 @@ const ButtonComponent = styled.button`
   width: 200px;
   height: 50px;
   background-color: ${(props) =>
-    props.background === "primary" ? "#9e4784" : "link" ? "#fff" : "#fff"};
+    props.background === "primary" ? "#ad5492" : "link" ? "#fff" : "#fff"};
   color: ${(props) =>
-    props.color === "primary" ? "#fff" : "link" ? "#9e4784" : "#fff"};
+    props.color === "primary" ? "#fff" : "link" ? "#ad5492" : "#fff"};
 
   @media (min-width: 1024px) {
     width: 230px;
@@ -32,9 +32,9 @@ const ButtonComponent = styled.button`
 
   &:hover {
     background-color: ${(props) =>
-      props.background === "primary" ? "#ad5492" : "#9e4784"};
+      props.background === "primary" ? "#ad5492" : "#ad5492"};
     color: ${(props) =>
-      props.color === "primary" ? "#fff" : " link" ? "#fff" : "#9e4784"};
+      props.color === "primary" ? "#fff" : " link" ? "#fff" : "#ad5492"};
   }
 
   a {

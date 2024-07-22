@@ -109,14 +109,18 @@ const ProjectsSlider = () => {
           </div>
           <div className="project-description">
             <p>{project.text}</p>
-            <div className="btn-container">
-              <a href={project.github} target="_blank">
-                <Button className="btn-project">KOD</Button>
-              </a>
-              <a href={project.live} target="_blank">
-                <Button className="btn-project btn-project--dark">LIVE</Button>
-              </a>
-            </div>
+            {!(project.id === 3) && (
+              <div className="btn-container">
+                <a href={project.github} target="_blank">
+                  <Button className="btn-project">KOD</Button>
+                </a>
+                <a href={project.live} target="_blank">
+                  <Button className="btn-project btn-project--dark">
+                    LIVE
+                  </Button>
+                </a>
+              </div>
+            )}
           </div>
         </CardComponent>
       ))}

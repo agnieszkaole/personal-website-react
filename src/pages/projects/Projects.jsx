@@ -46,7 +46,6 @@ const Projects = (props) => {
     <section className="projects" id="projects">
       <ProjectsPage>
         <h2 className="title">PROJEKTY</h2>
-        <p className="subtitle">(w przygotowaniu)</p>
         <div className="projects-container">
           <ProjectsSlider />
         </div>
