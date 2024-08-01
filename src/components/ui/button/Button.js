@@ -4,7 +4,8 @@ import styled from "styled-components";
 const ButtonComponent = styled.button`
   font-weight: 700;
   border-radius: 8px;
-  border: none;
+  /* border: 1px solid rgba(255, 255, 255, 0.4); */
+  border: 3px solid rgb(115, 49, 181);
   box-sizing: border-box;
   cursor: pointer;
   font-size: 14px;
@@ -14,16 +15,17 @@ const ButtonComponent = styled.button`
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   user-select: none;
-  margin: 15px 0;
+  margin: 50px 0 20px;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 200px;
   height: 50px;
-  background-color: ${(props) =>
-    props.background === "primary" ? "#ad5492" : "link" ? "#fff" : "#fff"};
-  color: ${(props) =>
-    props.color === "primary" ? "#fff" : "link" ? "#ad5492" : "#fff"};
-
+  /* background-color: ${(props) =>
+    props.background === "primary" ? "#ad5492" : "link" ? "#fff" : "#fff"};*/
+  background-color: rgba(13, 15, 38, 1);
+  /* color: ${(props) =>
+    props.color === "primary" ? "#fff" : "link" ? "#ad5492" : "#fff"}; */
+  color: white;
   @media (min-width: 1024px) {
     width: 230px;
     height: 65px;
@@ -31,10 +33,13 @@ const ButtonComponent = styled.button`
   }
 
   &:hover {
-    background-color: ${(props) =>
+    /* background-color: ${(props) =>
       props.background === "primary" ? "#ad5492" : "#ad5492"};
     color: ${(props) =>
-      props.color === "primary" ? "#fff" : " link" ? "#fff" : "#ad5492"};
+      props.color === "primary" ? "#fff" : " link" ? "#fff" : "#ad5492"}; */
+    background-color: rgb(115, 49, 181);
+    border: 1px solid rgb(115, 49, 181);
+    color: white;
   }
 
   a {

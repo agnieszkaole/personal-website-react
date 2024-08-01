@@ -12,12 +12,12 @@ const Navbar = styled.nav`
     top: 0;
     right: 0;
     z-index: 998;
-    background: rgba(55, 48, 107, 0.9);
+    background: var(--primary-color);
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
 
   ul {
-    list-style: none;
+    /* list-style: none; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,28 +70,6 @@ const Navbar = styled.nav`
       }
     }
   }
-
-  @media (min-width: 1024px) {
-    display: block;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 998;
-    background: var(--primary-color);
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
-    ul {
-      height: unset;
-      flex-direction: row;
-      li {
-        width: 200px;
-        &:first-of-type() a {
-          font-weight: 700;
-        }
-      }
-    }
-  }
 `;
 
 const HamburgerContainer = styled.div`
@@ -101,7 +79,7 @@ const HamburgerContainer = styled.div`
   right: 10px;
   width: 80px;
   height: 80px;
-  background: rgb(158, 71, 132);
+  /* background: rgb(158, 71, 132); */
   z-index: 999;
 
   .hamburger {
@@ -147,10 +125,6 @@ const HamburgerContainer = styled.div`
     &.active span:nth-of-type(3) {
       transform: translateY(-20px) rotate(45deg);
     }
-  }
-
-  @media (min-width: 1024px) {
-    display: none;
   }
 `;
 

@@ -111,10 +111,10 @@ const ProjectsSlider = () => {
             <p>{project.text}</p>
             {!(project.id === 3) && (
               <div className="btn-container">
-                <a href={project.github} target="_blank">
+                <a href={project.github} target="_blank" rel="noreferrer">
                   <Button className="btn-project">KOD</Button>
                 </a>
-                <a href={project.live} target="_blank">
+                <a href={project.live} target="_blank" rel="noreferrer">
                   <Button className="btn-project btn-project--dark">
                     LIVE
                   </Button>

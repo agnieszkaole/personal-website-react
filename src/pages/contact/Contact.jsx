@@ -82,25 +82,19 @@ const ContactPage = styled.div`
         margin: 30px 0;
         font-size: 24px;
       }
-
-
-
+    }
   }
-
-
-    }
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-    hr {
-      height: 4px;
-      width: 100%;
-      border: none;
-      border-radius: 10px;
-      background: #fff;
-      margin: 30px auto;
-    }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  hr {
+    height: 4px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    margin: 30px auto;
   }
 `;
 
@@ -124,6 +118,7 @@ const Contact = () => {
                 <a
                   href="https://www.linkedin.com/in/agnieszka-ole/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   linkedin.com/in/agnieszka-ole/
                 </a>
@@ -133,7 +128,11 @@ const Contact = () => {
               <h3>
                 GitHub:
                 <br />
-                <a href="https://www.github.com/agnieszkaole" target="_blank">
+                <a
+                  href="https://www.github.com/agnieszkaole"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   github.com/agnieszkaole
                 </a>
               </h3>

@@ -92,7 +92,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <a href={pdf} target="_blank">
+        <a href={pdf} target="_blank" rel="noreferrer">
           <Button
             style={{ textAlign: "center" }}
             background="primary"
