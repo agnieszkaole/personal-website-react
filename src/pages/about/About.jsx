@@ -1,9 +1,9 @@
 import React from "react";
-import pdf from "../../assets/pdf/Agnieszka_Ole_CV_dart.pdf";
-import Button from "../../components/ui/button/Button";
+import photo from "../../assets/img/AgnieszkaOleLegitymacjaWeb-removebg-preview_hag.png";
 import styled from "styled-components";
 import "../../styles/style.css";
 import "../../styles/variables.css";
+import { LinearGradient } from "react-text-gradients";
 
 const AboutPage = styled.div`
   position: relative;
@@ -11,7 +11,7 @@ const AboutPage = styled.div`
   color: #ffffff;
 
   .title {
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     text-align: center;
   }
 
@@ -20,32 +20,58 @@ const AboutPage = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 750px;
+    max-width: 1000px;
     margin: 50px auto;
-    text-align: center;
+    /* text-align: center; */
 
-    img {
+    /* img {
       border-radius: 10px;
       width: 160px;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       margin: 0 35px;
-    }
+    } */
 
     p {
       font-size: 18px;
       line-height: 1.5;
-      margin: 12px auto;
+      margin: 18px auto;
+
+      /* text-align: center; */
       /* max-width: 500px; */
     }
 
-    p:first-of-type {
+    h2 {
+      line-height: 1.4;
+    }
+
+    span {
       font-weight: 700;
-      margin-bottom: 25px;
+    }
+
+    .about-text {
+      flex-basis: 80%;
+      padding: 25px;
+    }
+
+    .heading-photo-container {
+      width: 180px;
+      height: 180px;
+      /* border: 1px solid rgba(255, 255, 255, 0.3); */
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+      background-color: #6648b9;
+      /* background-color: transparent; */
+      img {
+        width: 90%;
+        margin-top: 14px;
+        margin-left: 4px;
+      }
     }
 
     @media (min-width: 1024px) {
       flex-direction: row;
-      text-align: left;
+      /* text-align: left; */
 
       p {
         max-width: unset;
@@ -65,43 +91,35 @@ const About = () => {
   return (
     <section className="about" id="about">
       <AboutPage>
-        <h2 className="title">O mnie</h2>
+        {/* <h2 className="title">About</h2> */}
         <div className="about-container">
-          {/* <div className="about-image">
+          <div className="heading-photo-container">
             <img src={photo} alt="" />
-          </div> */}
+          </div>
           <div className="about-text">
-            <p>Hello! I'm Agnieszka Ole.</p>
-            <p>
-              I create responsive websites using
-              <span className="underline">HTML5, CSS3, JavaScript, React</span>.
-            </p>
+            <h2>
+              Hi! I'm a Front-end Developer based in Warsaw. I create responsive
+              websites using technologies such as HTML5, CSS3, JavaScript,
+              React, WordPress.
+            </h2>
             <p>
               I have started my adventure in web development driven by a
               curiosity about how websites work and a passion for bringing
               creative ideas to life through code.
             </p>
             <p>
-              My goal is to
-              <span className="underline">create web experiences</span> that are
-              not only <span className="underline">visually beautiful</span> but
-              also
-              <span className="underline">
-                intuitive and enjoyable for users.
-              </span>
+              My goal is to create web experiences that are not only
+              <LinearGradient gradient={["to left", "#2e62fd ,#d068ff"]}>
+                <span> visually beautiful </span>
+              </LinearGradient>
+              but also
+              <LinearGradient gradient={["to left", "#2e62fd ,#d068ff"]}>
+                <span> intuitive and enjoyable for users</span>
+              </LinearGradient>
+              .
             </p>
           </div>
         </div>
-        <a href={pdf} target="_blank" rel="noreferrer">
-          <Button
-            style={{ textAlign: "center" }}
-            background="primary"
-            color="primary"
-            onClick={() => console.log("clicked")}
-          >
-            POBIERZ CV
-          </Button>
-        </a>
       </AboutPage>
     </section>
   );

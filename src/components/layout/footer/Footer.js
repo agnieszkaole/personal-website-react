@@ -2,15 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterComponent = styled.footer`
-  background-color: #37306b;
+  background-color: var(--primary-color);
   text-align: center;
-  padding: 40px 10px;
+  padding: 20px 10px;
+
+  p {
+    font-weight: 700;
+  }
 `;
 
 const Footer = () => {
   return (
     <FooterComponent>
-      <p>AGNIESZKA OLE © 2023 WSZELKIE PRAWA ZASTRZEŻONE.</p>
+      <p>AGNIESZKA OLE © 2024 All Rights Reserved</p>
     </FooterComponent>
   );
 };

@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import "../../../styles/variables.css";
+
 const Navbar = styled.nav`
-  display: none;
+  /* display: none; */
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: -100vh;
+
+  z-index: 998;
+  background: var(--primary-color);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: ease-in-out 0.2s;
 
   &.visible-menu {
     display: block;
     position: fixed;
-    width: 100%;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.2);
     top: 0;
     right: 0;
     z-index: 998;
@@ -26,7 +36,7 @@ const Navbar = styled.nav`
 
     li {
       padding: 20px 0;
-      font-size: 18px;
+      font-size: 1.8rem;
       text-align: center;
       overflow: hidden;
       position: relative;
@@ -42,7 +52,7 @@ const Navbar = styled.nav`
         height: 2px;
         content: "";
         position: absolute;
-        background-color: #fff;
+        background-color: rgb(115, 49, 181);
         left: 10px;
         bottom: 10px;
         width: 0%;
@@ -129,8 +139,8 @@ const HamburgerContainer = styled.div`
 `;
 
 const Header = () => {
-  const [burger_class, setBurgerClass] = useState("hamburger");
-  const [menu_class, setMenuClass] = useState("");
+  const [burgerClass, setBurgerClass] = useState("hamburger");
+  const [menuClass, setMenuClass] = useState("");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   const updateMenu = () => {
@@ -144,17 +154,23 @@ const Header = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
+  const handleMenuClick = () => {
+    setBurgerClass("hamburger");
+    setMenuClass("");
+    setIsMenuClicked(false);
+  };
+
   return (
     <header>
       <div className="wrapper">
         <HamburgerContainer>
-          <div className={burger_class} onClick={updateMenu}>
+          <div className={burgerClass} onClick={updateMenu}>
             <span></span>
             <span></span>
             <span></span>
           </div>
         </HamburgerContainer>
-        <Navbar className={menu_class}>
+        <Navbar className={menuClass}>
           <ul className={isMenuClicked ? "visible-menu" : ""}>
             <li>
               <Link
@@ -162,10 +178,11 @@ const Header = () => {
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={500}
+                onClick={handleMenuClick}
               >
-                STRONA GŁÓWNA
+                Home
               </Link>
             </li>
             <li>
@@ -174,10 +191,11 @@ const Header = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={500}
+                onClick={handleMenuClick}
               >
-                O MNIE
+                About
               </Link>
             </li>
             <li>
@@ -186,10 +204,11 @@ const Header = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={500}
+                onClick={handleMenuClick}
               >
-                PROJEKTY
+                Projects
               </Link>
             </li>
             <li>
@@ -198,10 +217,11 @@ const Header = () => {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={500}
+                onClick={handleMenuClick}
               >
-                KONTAKT
+                Contact
               </Link>
             </li>
           </ul>
@@ -210,4 +230,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;

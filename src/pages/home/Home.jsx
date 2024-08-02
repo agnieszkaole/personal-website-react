@@ -2,10 +2,12 @@ import React from "react";
 import ParticlesBackground from "../../components/ui/particlesBg/ParticlesBackground";
 import { LinearGradient } from "react-text-gradients";
 import { Link } from "react-scroll";
-import Button from "../../components/ui/button/Button";
+// import Button from "../../components/ui/button/Button";
 import "../../styles/variables.css";
 import styled from "styled-components";
-import photo from "../../assets/img/AgnieszkaOleLegitymacjaWeb-removebg-preview_hag.png";
+
+import pdf from "../../assets/pdf/Agnieszka_Ole_CV_EN.pdf";
+import Button from "../../components/ui/button/Button";
 
 const HomePage = styled.div`
   position: relative;
@@ -49,7 +51,7 @@ const HomePage = styled.div`
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.4;
     }
 
@@ -66,34 +68,56 @@ const HomePage = styled.div`
       padding: 15px;
     }
 
-    .heading-photo-container {
-      width: 200px;
-      height: 200px;
-      /* border: 1px solid rgba(255, 255, 255, 0.3); */
-      /* border-radius: 50%; */
-      overflow: hidden;
-      margin: 0 auto;
-      /* background-color: var(--primary-color); */
+    .btn--secondary {
+      color: #fff;
       background-color: transparent;
-      img {
-        width: 90%;
-        margin-top: 16px;
-        margin-left: 10px;
+      border: 2px solid rgb(75, 86, 251);
+
+      &:hover {
+        background-color: rgb(75, 86, 251);
+        border: 2px solid rgb(75, 86, 251);
       }
     }
   }
 
-  @keyframes wheel {
-    to {
-      opacity: 0;
-      top: 60px;
+  .arrow,
+  .arrow:before {
+    position: absolute;
+    left: 50%;
+  }
+  .arrow {
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
+    margin: -20px 0 0 -20px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    transform: rotate(45deg);
+    cursor: pointer;
+    &:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      margin: -10px 0 0 -10px;
+      border-left: none;
+      border-top: none;
+      border-right: 1px #fff solid;
+      border-bottom: 1px #fff solid;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-name: arrow;
     }
   }
-
-  @-webkit-keyframes wheel {
-    to {
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
       opacity: 0;
-      top: 60px;
+      transform: translate(-10px, -10px);
     }
   }
 
@@ -137,12 +161,9 @@ const Home = () => {
         <ParticlesBackground />
         <div className="content">
           <div className="heading-container">
-            {/* <div className="heading-photo-container">
-              <img src={photo} alt="" />d
-            </div> */}
             <h1>Hello, I'm Agnieszka Ole</h1>
             <p>
-              <LinearGradient gradient={["to left", "#17acff ,#d068ff"]}>
+              <LinearGradient gradient={["to left", "#2e62fd ,#d068ff"]}>
                 <span>Front-end developer</span>
               </LinearGradient>
             </p>
@@ -150,20 +171,34 @@ const Home = () => {
               with a&nbsp;passion for creating engaging and user-friendly
               web&nbsp;experiences.
             </p>{" "}
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-            >
-              <Button className="btn-project btn-project--dark">
-                Contact me{" "}
-              </Button>
-            </Link>
-          </div>
+            <div className="btn-container">
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                <Button>Let's talk</Button>
+              </Link>
+              <a href={pdf} target="_blank" rel="noreferrer">
+                <Button className="btn btn--secondary">Download CV</Button>
+              </a>
+            </div>
+          </div>{" "}
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <div className="arrow"></div>
+          </Link>
         </div>
+
         {/* <div className="particles-bg"></div> */}
       </HomePage>
     </section>
