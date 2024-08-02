@@ -198,7 +198,7 @@ const Header = () => {
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 activeClass="active"
                 to="projects"
@@ -210,7 +210,7 @@ const Header = () => {
               >
                 Projects
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 activeClass="active"

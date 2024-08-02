@@ -5,10 +5,10 @@ const FooterComponent = styled.footer`
   background-color: var(--primary-color);
   text-align: center;
   padding: 20px 10px;
-
+  /*
   p {
     font-weight: 700;
-  }
+  } */
 `;
 
 const Footer = () => {
