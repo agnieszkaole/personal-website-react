@@ -8,14 +8,14 @@ const ButtonComponent = styled.button`
   border: 2px solid rgb(115, 49, 181);
   box-sizing: border-box;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: "Montserrat", Arial, sans-serif;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   user-select: none;
-  margin: 50px 10px 20px;
+  margin: 20px auto;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 180px;

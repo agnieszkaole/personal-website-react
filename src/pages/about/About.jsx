@@ -20,28 +20,20 @@ const AboutPage = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
-    margin: 50px auto;
-    /* text-align: center; */
-
-    /* img {
-      border-radius: 10px;
-      width: 160px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      margin: 0 35px;
-    } */
+    max-width: 1200px;
+    margin: 40px auto;
 
     p {
-      font-size: 18px;
-      line-height: 1.5;
+      font-size: 1rem;
+      line-height: 1.4;
       margin: 18px auto;
-
-      /* text-align: center; */
-      /* max-width: 500px; */
+      text-align: center;
     }
 
     h2 {
+      font-size: 1rem;
       line-height: 1.4;
+      text-align: center;
     }
 
     span {
@@ -50,7 +42,7 @@ const AboutPage = styled.div`
 
     .about-text {
       flex-basis: 80%;
-      padding: 25px;
+      padding: 10px;
     }
 
     .heading-photo-container {
@@ -59,7 +51,7 @@ const AboutPage = styled.div`
       /* border: 1px solid rgba(255, 255, 255, 0.3); */
       border-radius: 50%;
       overflow: hidden;
-      margin: 0 auto;
+      margin: 15px;
       background-color: #6648b9;
       /* background-color: transparent; */
       img {
@@ -69,12 +61,40 @@ const AboutPage = styled.div`
       }
     }
 
+    @media (min-width: 768px) {
+      .about-text {
+        max-width: 670px;
+      }
+    }
     @media (min-width: 1024px) {
       flex-direction: row;
       /* text-align: left; */
-
+      h2,
+      p {
+        text-align: left;
+      }
       p {
         max-width: unset;
+      }
+    }
+    @media (min-width: 1200px) {
+      h2,
+      p {
+        font-size: 1.2rem;
+      }
+      .about-text {
+        max-width: 820px;
+        padding: 20px;
+      }
+    }
+    @media (min-width: 1400px) {
+      h2,
+      p {
+        font-size: 1.4rem;
+      }
+      .about-text {
+        max-width: 1000px;
+        padding: 20px;
       }
     }
   }
@@ -98,14 +118,14 @@ const About = () => {
           </div>
           <div className="about-text">
             <h2>
-              Hi! I'm a Front-end Developer based in Warsaw. I create responsive
-              websites using technologies such as HTML5, CSS3, JavaScript,
-              React, WordPress.
+              Hi! I'm a Front-end Developer based in Warsaw. I&nbsp;create
+              responsive websites using technologies such as HTML5, CSS3,
+              JavaScript, React, WordPress.
             </h2>
             <p>
-              I have started my adventure in web development driven by a
-              curiosity about how websites work and a passion for bringing
-              creative ideas to life through code.
+              I have started my adventure in web development driven by
+              a&nbsp;curiosity about how websites work and a&nbsp;passion for
+              bringing creative ideas to life through code.
             </p>
             <p>
               My goal is to create web experiences that are not only

@@ -4,27 +4,32 @@ import { LinearGradient } from "react-text-gradients";
 import photo from "../../assets/img/aryan-dhiman-iGLLtLINSkw-unsplash.jpg";
 
 const ContactPage = styled.div`
-  padding: 50px 20px;
+  padding: 35px 5px;
   position: relative;
   text-align: center;
   background-color: rgba(13, 15, 38, 0.8);
 
-  h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin: 10px auto;
-  }
   .content {
     margin: 0 auto;
     color: #fff;
+    width: 100%;
+    h2 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin: 10px auto;
+    }
+    p {
+      font-size: 1rem;
+    }
 
     ul {
       list-style: none;
     }
 
     li {
-      margin: 15px auto;
-      font-weight: 700;
+      margin: 20px auto;
+      /* font-weight: 700; */
+      font-size: 1rem;
     }
 
     a {
@@ -39,15 +44,6 @@ const ContactPage = styled.div`
       background: #fff;
       margin: 30px auto;
     }
-    @media (min-width: 640px) {
-      width: 600px;
-    }
-
-    @media (min-width: 1024px) {
-      padding: 20px;
-      width: 800px;
-      margin: 0 auto;
-    }
   }
 
   .title-container {
@@ -57,7 +53,7 @@ const ContactPage = styled.div`
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     /* border: 1px solid rgba(255, 255, 255, 0.15); */
-    padding: 50px 20px;
+    padding: 30px 5px;
     font-size: 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     width: 90%;
@@ -86,12 +82,37 @@ const ContactPage = styled.div`
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 2px solid rgb(64, 2, 125);
-    padding: 40px 20px;
+    padding: 15px 10px;
     font-size: 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     width: 90%;
     max-width: 800px;
     margin: 25px auto;
+  }
+
+  @media (min-width: 640px) {
+    .content {
+      padding: 20px;
+      width: 700px;
+      margin: 0 auto;
+      li,
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .content {
+      width: 800px;
+      margin: 0 auto;
+      h2 {
+        font-size: 1.8rem;
+      }
+      li,
+      p {
+        font-size: 1.3rem;
+      }
+    }
   }
 `;
 
@@ -102,7 +123,7 @@ const Contact = () => {
         <div className="content">
           <div className="title-container">
             <h2>GET IN TOUCH</h2>
-            <h4>Please feel free to reach me at:</h4>
+            <p>Please feel free to reach me at:</p>
           </div>
           <div className="data-container">
             <div>

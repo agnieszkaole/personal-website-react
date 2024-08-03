@@ -22,50 +22,44 @@ const HomePage = styled.div`
 
   .particles-bg {
     position: relative;
-    /* flex-basis: 50%; */
-    /* width: 500px; */
     z-index: 1;
   }
   .content {
     position: relative;
-    left: 80px;
-    /* flex-basis: 50%; */
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 10px;
     height: 100vh;
-    /* max-height: 450px; */
-    /* margin: 0 auto; */
-    /* max-width: 600px; */
-    background-color: rgba(13, 15, 38, 0.8);
-    /* border: 1px solid rgba(255, 255, 255, 0.2); */
-    /* border-left: 1px solid rgba(255, 255, 255, 0.2); */
-    /* border-right: 1px solid rgba(255, 255, 255, 0.2); */
-    border-radius: 5px;
+    background-color: rgba(13, 15, 38, 0.6);
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       margin-bottom: 10px;
-      /* text-align: center; */
+      text-align: center;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.4;
+      font-size: 1rem;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      text-align: center;
+      max-width: 360px;
     }
 
     span {
       /* color: #5e47fd; */
       font-weight: 700;
-      font-size: 3.4rem;
+      font-size: 1.9rem;
+      line-height: 1.1;
     }
     .heading-container {
       position: relative;
       z-index: 2;
       max-width: 650px;
-      background-color: d rgba(13, 15, 38, 0.8);
-      padding: 15px;
+      /* background-color: rgba(13, 15, 38, 0.8); */
+      padding: 5px;
     }
 
     .btn--secondary {
@@ -88,7 +82,7 @@ const HomePage = styled.div`
   .arrow {
     width: 30px;
     height: 30px;
-    bottom: 50px;
+    bottom: 30px;
     margin: -20px 0 0 -20px;
     border-left: none;
     border-top: none;
@@ -121,35 +115,84 @@ const HomePage = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
-    /* .content {
-      h1 {
-        font-size: 70px;
-      }
-
-      h2 {
-        font-size: 38px;
-        font-weight: 400;
-      }
-
-      p {
-        margin: 40px 0 50px;
-        max-width: 500px;
-        font-size: 18px;
-        max-width: 90%;
-      }
-    } */
-  }
-
-  @media (min-width: 1400px) {
+  @media (min-width: 640px) {
     .content {
-      /* padding: 230px 60px 0px; */
+      background-color: rgba(13, 15, 38, 0.8);
+      h1 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1.2rem;
+        max-width: 440px;
+        margin-bottom: 15px;
+      }
+      span {
+        font-size: 2.5rem;
+      }
     }
   }
 
-  @media (min-width: 1900px) {
+  @media (min-width: 768px) {
     .content {
-      /* max-width: 1300px; */
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 1.4rem;
+        max-width: 600px;
+      }
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content {
+      margin: 0 auto;
+
+      padding: 40px;
+      height: 100vh;
+    }
+  }
+  @media (min-width: 1200px) {
+    .content {
+      left: 80px;
+      margin: 0;
+      h1,
+      p {
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        max-width: 580px;
+      }
+      p {
+        font-size: 1.6rem;
+        max-width: 580px;
+      }
+      span {
+        font-size: 3.3rem;
+      }
+    }
+  }
+  @media (min-width: 1920px) {
+    .content {
+      .heading-container {
+        max-width: 800px;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.6rem;
+        max-width: 800px;
+      }
+      span {
+        font-size: 4.4rem;
+      }
     }
   }
 `;
@@ -168,7 +211,7 @@ const Home = () => {
               </LinearGradient>
             </p>
             <p>
-              with a&nbsp;passion for creating engaging and user-friendly
+              with a&nbsp;passion for creating engaging and&nbsp;user-friendly
               web&nbsp;experiences.
             </p>{" "}
             <div className="btn-container">
