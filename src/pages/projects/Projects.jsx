@@ -1,53 +1,40 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "../../components/ui/card/Card";
-import ProjectsSlider from "./ProjectsSlider";
+import CardComponent from "../../components/ui/card/Card";
+import { projects } from "../../utils/constants/constants";
 
 const ProjectsPage = styled.div`
-  padding: 50px 20px 50px;
-  background: rgb(238, 238, 238);
-  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(0deg, rgb(14, 2, 47) 20%, rgb(0, 2, 22));
 
   .title {
-    color: #37306b;
+    color: rgb(108, 68, 217);
+    text-align: center;
   }
 
-  .subtitle {
-    color: #37306b;
-  }
   .projects-container {
-    display: block;
     max-width: 1200px;
-    height: 500px;
     margin: 30px auto 0;
   }
 
-  .slick-dots li button:before {
-    width: 30px;
+  .btn-container {
+    margin-top: 10px;
   }
 
-  .slick-dots {
-    bottom: -50px;
-  }
-  .slick-dots li {
-    margin: 0 12px;
-  }
-  .slick-dots li button:before {
-    font-size: 12px;
-    line-height: 50px;
-  }
-  .slick-dots li.slick-active button:before {
-    font-size: 18px;
+  .btn-project {
+    margin: 5px;
   }
 `;
 
-const Projects = (props) => {
+const Projects = () => {
   return (
     <section className="projects" id="projects">
       <ProjectsPage>
-        <h2 className="title">PROJEKTY</h2>
+        <h2 className="title">Projects</h2>
         <div className="projects-container">
-          <ProjectsSlider />
+          {projects.map((project) => (
+            <CardComponent key={project.id} project={project} />
+          ))}
         </div>
       </ProjectsPage>
     </section>

@@ -7,7 +7,7 @@ import { LinearGradient } from "react-text-gradients";
 
 const AboutPage = styled.div`
   position: relative;
-  padding: 50px 20px;
+  padding: 50px 20px 30px;
   color: #ffffff;
 
   .title {

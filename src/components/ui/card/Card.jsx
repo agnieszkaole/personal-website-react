@@ -1,75 +1,67 @@
-// import React from "react";
-// import styled from "styled-components";
-// import { projects } from "../../../utils/constants/constants";
+import React from "react";
+import styled from "styled-components";
+import { projects } from "../../../utils/constants/constants";
+// import { Button } from "react-scroll";
+import Button from "../button/Button.js";
 
-// const CardComponent = styled.div`
-//   height: 500px;
-//   width: 90%;
-//   margin: 0 auto;
-//   border-radius: 8px;
-//   transition: 0.3s;
-//   overflow: hidden;
-//   position: relative;
-//   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+const CardComponent = styled.div`
+  /* height: 500px;
+  width: 90%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.1);
+  background: #303055ba;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  /* height: 250px; */
+  padding: 20px 30px;
 
-//   .project-description {
-//     height: 50%;
-//     background: #37306b;
-//   }
+  .project-description {
+    flex-basis: 50%;
+    h1 {
+      margin: 10px auto;
+    }
+  }
 
-//   .project-description p {
-//     padding: 20px;
-//   }
+  /* .project-description p {
+    padding: 20px;
+  } */
 
-//   .project-image {
-//     position: relative;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 50%;
-//   }
-//   .project-image img {
-//     height: 100%;
-//     width: 100%;
-//     object-fit: cover;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     border-bottom: 1px solid #fff;
-//   }
+  .project-image {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    flex-basis: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
 
-//   .btn-project {
-//     width: 120px;
-//     height: 30px;
-//     margin: 0 10px;
-//   }
+const Card = ({ project }) => (
+  <CardComponent>
+    <div className="project-description">
+      <h1>{project.title}</h1>
+      <p>{project.text}</p>
 
-//   .btn-project--dark {
-//     background-color: #9e4784;
-//     color: #fff;
-//   }
-// `;
+      <a href={project.live} target="_blank" rel="noreferrer">
+        <Button>LIVE</Button>
+      </a>
+    </div>{" "}
+    <div className="project-image">
+      <img src={project.photo} alt={`Project ${project.id}`} />
+    </div>
+  </CardComponent>
+);
 
-// const Card = () => {
-//   // return projects.map((project, index) => (
-//   //   <CardComponent key={index}>
-//   //     <div className="project-image">
-//   //       <img src={project.photo} />
-//   //     </div>
-//   //     <div className="project-description">
-//   //       <p>{project.text}</p>
-//   //     </div>
-//   //   </CardComponent>
-//   // ));
-
-//   <CardComponent>
-//     <div className="project-image">
-//       <img src={projects[0].photo} />
-//     </div>
-//     <div className="project-description">
-//       <p>{projects[0].text}</p>
-//     </div>
-//   </CardComponent>;
-// };
-// export default Card;
+export default Card;

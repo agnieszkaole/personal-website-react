@@ -91,6 +91,8 @@ const HamburgerContainer = styled.div`
   height: 80px;
   /* background: rgb(158, 71, 132); */
   z-index: 999;
+  border-radius: 50%;
+  background: rgb(6 0 22 / 71%);
 
   .hamburger {
     position: fixed;
@@ -198,7 +200,7 @@ const Header = () => {
                 About
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
                 activeClass="active"
                 to="projects"
@@ -210,7 +212,7 @@ const Header = () => {
               >
                 Projects
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 activeClass="active"

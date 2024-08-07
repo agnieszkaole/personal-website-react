@@ -7,8 +7,8 @@ const ContactPage = styled.div`
   padding: 35px 5px;
   position: relative;
   text-align: center;
-  background-color: rgba(13, 15, 38, 0.8);
-
+  /* background-color: rgba(13, 15, 38, 0.8); */
+  background: linear-gradient(0deg, rgb(0, 2, 22), rgb(14, 2, 47) 20%);
   .content {
     margin: 0 auto;
     color: #fff;
